@@ -21,22 +21,23 @@ let transporter=nodemailer.createTransport({
 // preapre-email
 
 let myEmail ={
-    from:'text email <info@teamrabbil.com>',
+    from:"text email <rashedul.alam362@gmail.com>",
     to:toEmail,
     subject:'test mail',
     text:'test mail'
 }
 
-// try {
-//  await sendMail(myEmail)
+
+
+try {
+ await transporter.sendMail(myEmail)
  
-//  return NextResponse.json({mes:'success'})
+ return NextResponse.json({msg:'success'})
     
-// } catch (error) {
+} catch (error) {
 
-//     return NextResponse.json({mes:'fail'})
-// }
+   return NextResponse.json({msg:'fail'})
+}
     
 
-result=await transporter.sendMail(myEmail)
-console.log(result);
+
