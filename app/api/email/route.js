@@ -9,7 +9,6 @@ export async function GET(req,res){
 
   // Create a transporter
 
-<<<<<<< HEAD
   const Transporter=nodemailer.createTransport({
     host: "mail.teamrabbil.com",
     port:25,
@@ -47,26 +46,3 @@ export async function GET(req,res){
 
 }
 
-=======
-let myEmail ={
-    from:"text email <rashedul.alam362@gmail.com>",
-    to:toEmail,
-    subject:'test mail',
-    text:'test mail'
-}
-
-
-
-try {
- await transporter.sendMail(myEmail)
- 
- return NextResponse.json({msg:'success'})
-    
-} catch (error) {
-
-   return NextResponse.json({msg:'fail'})
-}
-    
-
-
->>>>>>> 1f11f29ceb89cb574768af928134fe80d0b3073a

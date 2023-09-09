@@ -11,8 +11,7 @@ const token=await new SignJWT(payload)
           .setIssuer('http://localhost:3000/')
           .setExpirationTime('2h')
           .sign(key)
-
-       return NextResponse.json({token: token})   
+          return NextResponse.json({token: token})   
 
 }
 
